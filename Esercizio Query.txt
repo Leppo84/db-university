@@ -10,6 +10,8 @@ SELECT * FROM `courses` WHERE `cfu` > 10;
 
 SELECT * FROM `students` WHERE '1992-07-04' <= `date_of_birth`; (1589?)
 
+SELECT * FROM `students` WHERE YEAR(CURRENT_DATE) - YEAR(`date_of_birth`) > 30 ORDER BY `students`.`date_of_birth
+
 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 
 SELECT * FROM `courses` WHERE `period` = 'I semestre' AND `year` = '1';
